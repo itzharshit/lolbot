@@ -45,13 +45,6 @@ async def login_handler(c: Client, m: Message):
 
 @StreamBot.on_message((filters.private) & (filters.document | filters.video | filters.audio | filters.photo) & ~filters.edited, group=4)
 async def private_receive_handler(c: Client, m: Message):
-    check_pass = await pass_db.get_user_pass(m.chat.id)
-    if check_pass== None:
-        await m.reply_text("Login first using /login cmd \n don\'t know the pass? request it from @adarshgoelz")
-        return
-    if check_pass != MY_PASS:
-        await pass_db.delete_user(m.chat.id)
-        return
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id)
         await c.send_message(
