@@ -30,11 +30,15 @@
       }
     </style>
 <style>
-.container {
-    left: 50%;
+.center {
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    //Option 1
+    top:50%; left: 50%;
+    margin-left: -150px;
+    margin-top: -75px;
+    //Option 2 (Needs to check browser compatibility)
+    top: calc(50%-75px);
+    left: calc(50%-150px);
 }
 </style>
 </head>
