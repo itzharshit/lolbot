@@ -211,7 +211,7 @@ async def private_receive_handler(c: Client, m: Message):
 
 
 
-@StreamBot.on_message(filters.channel & ~filters.group & (filters.video) & ~filters.edited & ~filters.forwarded, group=-1)
+@StreamBot.on_message(filters.channel & ~filters.group & (filters.video | filters.audio) & ~filters.edited & ~filters.forwarded, group=-1)
 async def channel_receive_handler(bot, broadcast):
     check_pass = await pass_db.get_user_pass(broadcast.chat.id)
     if int(broadcast.chat.id) in Var.BANNED_CHANNELS:
