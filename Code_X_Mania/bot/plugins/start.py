@@ -11,61 +11,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant
 db = Database(Var.DATABASE_URL, Var.SESSION_NAME)
 
-from pyrogram.types import ReplyKeyboardMarkup
 
-
-buttonz=ReplyKeyboardMarkup(
-            [
-                ["start⚡️","help📚","login🔑","dc"],
-                ["follow❤️","ping📡","status📊","maintainers😎"]
-                        
-            ],
-            resize_keyboard=True
-        )
-
-
-            
-            
-            
-            
-@StreamBot.on_message(filters.regex("maintainers😎"))
-async def follow_user(b,m):
-    try:
-       await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
-    except Exception:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="I am Coded By [Adarsh Goel](https://github.com/code-x-mania)",
-                    
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("Developer💻", url=f"https://t.me/adarsh_goel")
-                            ]
-                        ]
-                    ),
-                    parse_mode="markdown",
-                    disable_web_page_preview=True)
-            
-         
-@StreamBot.on_message(filters.regex("follow❤️"))
-async def follow_user(b,m):
-    try:
-       await b.send_message(chat_id=m.chat.id,text="HELLO",quote=True)
-    except Exception:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="<B>HERE'S THE FOLLOW LINK</B>",
-                    
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("FOLLOW ME", url=f"https://GITHUB.COM/CODE-X-MANIA")
-                            ]
-                        ]
-                    ),
-                    parse_mode="HTML",
-                    disable_web_page_preview=True)
 
 @StreamBot.on_message((filters.command("start") | filters.regex('start⚡️')) & filters.private & ~filters.edited)
 async def start(b, m):
@@ -262,10 +208,4 @@ async def help_handler(bot, message):
 <b> I also support Channels, add me to you Channel and send any media files and see miracle✨ also send /list to know all commands""",
         parse_mode="HTML",
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton("💁‍♂️ DEV", url="https://t.me/codexmania")],
-                [InlineKeyboardButton("💥 FOLLOW", url="https://GitHub.com/code-x-mania")]
-            ]
-        )
     )
