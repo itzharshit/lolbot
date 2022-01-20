@@ -1,4 +1,4 @@
-# (c) Jigarvarma2005 || Code-X-Mania || kanged by Harshit_shrivastav
+# (c) Jigarvarma2005 || Code-X-Mania || 
 #edit at your own risk
 import os
 import asyncio
