@@ -109,7 +109,7 @@ async def private_receive_handler(c: Client, m: Message):
         await c.send_message(chat_id=Var.BIN_CHANNEL, text=f"Gᴏᴛ FʟᴏᴏᴅWᴀɪᴛ ᴏғ {str(e.x)}s from [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n\n**𝚄𝚜𝚎𝚛 𝙸𝙳 :** `{str(m.from_user.id)}`", disable_web_page_preview=True, parse_mode="Markdown")
 
 
-@StreamBot.on_message((filters.private) & (filters.video | filters.audio) & ~filters.edited, group=4)
+@StreamBot.on_message(filters.media & filters.private & filters.incoming)
 async def private_receive_handler(c: Client, m: Message):
     if not await db.is_user_exist(m.from_user.id):
         await db.add_user(m.from_user.id)
