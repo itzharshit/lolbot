@@ -85,13 +85,9 @@ async def private_receive_handler(c: Client, m: Message):
         msg_text ="""
 <u>**LINK GENERATED**</u>
 
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <code>{}</code>
-
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> **{}**
-
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <code>{}</code>
-
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE</b>"""
+<b>Name :</b> <code>{}</code>
+<b>Size:</b> **{}**
+<b>Download URL:</b> <code>{}</code>"""
 
         await log_msg.reply_text(text=f"**Requested by :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**user id :** `{m.from_user.id}`\n**Stream ʟɪɴᴋ :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
@@ -183,17 +179,11 @@ async def private_receive_handler(c: Client, m: Message):
         
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
+<u>**LINK GENERATED**</u>
 
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>
-
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>
-
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
-
-<b> 🖥WATCH  :</b> <i>{}</i>
-
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE</b>"""
+<b>Name :</b> <code>{}</code>
+<b>Size:</b> **{}**
+<b>Download URL:</b> <code>{}</code>"""
 
         await log_msg.reply_text(text=f"**Requested By :** [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n**User id :** `{m.from_user.id}`\n**Stream  :** {stream_link}", disable_web_page_preview=True, parse_mode="Markdown", quote=True)
         await m.reply_text(
@@ -247,7 +237,7 @@ async def channel_receive_handler(bot, broadcast):
         await bot.send_message(chat_id=Var.BIN_CHANNEL, text=f"**#ᴇʀʀᴏʀ_ᴛʀᴀᴄᴇʙᴀᴄᴋ:** `{e}`", disable_web_page_preview=True, parse_mode="Markdown")
         print(f"Cᴀɴ'ᴛ Eᴅɪᴛ Bʀᴏᴀᴅᴄᴀsᴛ Mᴇssᴀɢᴇ!\nEʀʀᴏʀ:  **Give me edit permission in updates and bin Chanell{e}**")
 
-@StreamBot.on_message(filters.channel & ~filters.group & (filters.document | filters.photo) & ~filters.edited & ~filters.forwarded, group=-1)
+@StreamBot.on_message(filters.channel & ~filters.group & (filters.document) & ~filters.edited & ~filters.forwarded, group=-1)
 async def channel_receive_handler(bot, broadcast):
     check_pass = await pass_db.get_user_pass(broadcast.chat.id)
     if int(broadcast.chat.id) in Var.BANNED_CHANNELS:
