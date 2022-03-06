@@ -19,7 +19,7 @@ async def start(b, m):
         await db.add_user(m.from_user.id)
         await b.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ:** \n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{m.from_user.first_name}](tg://user?id={m.from_user.id}) __Sᴛᴀʀᴛᴇᴅ Yᴏᴜʀ Bᴏᴛ !!__"
+            f"**#NEW_USER:** \nA new user started [{m.from_user.first_name}](tg://user?id={m.from_user.id})  @filestreamprobot!!"
         )
     usr_cmd = m.text.split("_")[-1]
     if usr_cmd == "start" or "/start":
@@ -29,7 +29,7 @@ async def start(b, m):
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="__𝓢𝓞𝓡𝓡𝓨, 𝓨𝓞𝓤 𝓐𝓡𝓔 𝓐𝓡𝓔 𝓑𝓐𝓝𝓝𝓔𝓓 𝓕𝓡𝓞𝓜 𝓤𝓢𝓘𝓝𝓖 𝓜𝓔. 𝓒ᴏɴᴛᴀᴄᴛ ᴛʜᴇ 𝓓ᴇᴠᴇʟᴏᴘᴇʀ__\n\n @codexmaniabot **𝙃𝙚 𝙬𝙞𝙡𝙡 𝙝𝙚𝙡𝙥 𝙮𝙤𝙪**",
+                        text="You are banned, contact @pyrogrammers",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -52,16 +52,16 @@ async def start(b, m):
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>𝓢𝓸𝓶𝓮𝓽𝓱𝓲𝓷𝓰 𝔀𝓮𝓷𝓽 𝔀𝓻𝓸𝓷𝓰</i> <b> <a href='http://t.me/codexmaniabot'>CLICK HERE FOR SUPPORT </a></b>",
+                    text="<i>An error occurred</i> <b>Contact @pyrogrammers</b>",
                     parse_mode="HTML",
                     disable_web_page_preview=True)
                 return
         await StreamBot.send_photo(
             chat_id=m.chat.id,
             photo ="https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png",
-            caption ="""Hi !
-I am Telegram File to Link Generator Bot with Channel support.
-Send me any file and get a direct download link and streamable link.!""",
+            caption ="""Hello !
+I am file stream bot, I can play your video file in your browser.
+You can also add me to your movie or video channel to get stream and download button for your file.""",
             parse_mode="html",
             )
                                                                                        
@@ -74,7 +74,7 @@ Send me any file and get a direct download link and streamable link.!""",
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="**Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ. Qᴜɪᴄᴋʟʏ ᴄᴏɴᴛᴀᴄᴛ** @codexmaniachat",
+                        text="**You are banned, contact @pyrogrammers",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -101,7 +101,7 @@ Send me any file and get a direct download link and streamable link.!""",
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ** [ADARSH GOEL](https://t.me/codexmaniabot)",
+                    text="**An error occurred, contact @pyrogrammers group.",
                     parse_mode="markdown",
                     disable_web_page_preview=True)
                 return
@@ -168,7 +168,7 @@ async def help_handler(bot, message):
         await db.add_user(message.from_user.id)
         await bot.send_message(
             Var.BIN_CHANNEL,
-            f"**Nᴇᴡ Usᴇʀ Jᴏɪɴᴇᴅ **\n\n__Mʏ Nᴇᴡ Fʀɪᴇɴᴅ__ [{message.from_user.first_name}](tg://user?id={message.from_user.id}) __Started Your Bot !!__"
+            f"**#NEW_USER**\nSomeone started [{message.from_user.first_name}](tg://user?id={message.from_user.id})."
         )
     if Var.UPDATES_CHANNEL is not None:
         try:
@@ -176,7 +176,7 @@ async def help_handler(bot, message):
             if user.status == "kicked":
                 await bot.send_message(
                     chat_id=message.chat.id,
-                    text="<i>Sᴏʀʀʏ Sɪʀ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ FROM USING ᴍᴇ. Cᴏɴᴛᴀᴄᴛ ᴛʜᴇ Dᴇᴠᴇʟᴏᴘᴇʀ</i>",
+                    text="You are banned, contact @pyrogrammers group.",
                     parse_mode="HTML",
                     disable_web_page_preview=True
                 )
