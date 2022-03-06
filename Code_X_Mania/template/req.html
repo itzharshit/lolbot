@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>%s</title>
-    
     <link rel="stylesheet" type='text/css' href="https://drive----google.com/uc?export=view&id=1pVLG4gZy7jdow3sO-wFS06aP_A9QX0O6">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
@@ -15,155 +14,43 @@
     
         									 
 <style>
-
-      .button {
-      margin: auto;
-      border:none;
-      border-radius: 8px;
-      background-color: #07b9e6;
-      font-size: 12px;
-      height: 60px;
-      width: ;
-      color: white;
-      align: center;
+      marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: Blue;
       font-family: sans-serif;
       }
-
-.element {
-  height: 250px;
-  width: 250px;
-  margin: 0 auto;
-  background-color: red;
-  animation-name: stretch;
-  animation-duration: 1.5s; 
-  animation-timing-function: ease-out; 
-  animation-delay: 0;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-fill-mode: none;
-  animation-play-state: running;
-}
-
-@keyframes stretch {
-  0% {
-    transform: scale(.3);
-    background-color: red;
-    border-radius: 100%;
-  }
-  50% {
-    background-color: orange;
-  }
-  100% {
-    transform: scale(1.5);
-    background-color: yellow;
-  }
-}
-
-body,
-html {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
- 
-
-.header {
-  text-align: center; 
-}
-
-.tgch {
-white-space: nowrap;
-color:blue;
-padding: 12px;
-font-size:30px;
-font-family: 'Brush Script MT',  cursive;
-margin-top:20px;
-border:none;
-align:center;
-border-radius: 10px;
-width:220px;
-height: 55px;  
-background-color:#07b9e6;
-}
-
-.tgicon {
-float: left;
-margin-left:-20px;
-margin-top:-2px;
-}
     </style>
     <style>
-      .button{
-      margin: auto;
-      border:none;
-      border-radius: 8px;
-      background-color: #07b9e6;
-      font-size: 12px;
-      height: 60px;
-      width: ;
-      color: white;
-      align: center;
+      marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: Blue;
       font-family: sans-serif;
       }
-
-.tgch {
-white-space: nowrap;
-color:white;
-padding: 12px;
-font-size:20px;
-font-family: 'Brush Script MT',  cursive;
-margin-top:20px;
-border:none;
-align:center;
-border-radius: 10px;
-width:220px;
-height: 45px;  
-background-color:#07b9e6;}
-.tgicon {
-float: left;
-margin-left:-20px;
-margin-top:-2px;
-}
     </style>
-
 </head>
 
 <body>
-
+	
     <header>
-<center>
-<div class="element">
-        	<button class="button">
-<marquee>
+        <marquee bgcolor="#f7f305"
 <div class="toogle"></div>
-<div id="file-name">
+        <div id="file-name">
             %s
         </div>
 </marquee>
-</button></center>
     </header>
-<div>
-<H1> </H1> 
-</div>
 
-    <div class="container" bgcolor="red">
-        <tag src="%s" class="player" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSvawFuxunmeRkIG1sDlRtb6gFtA0UZxry-w&usqp=CAU"></tag>
+    <div class="container">
+        <tag src="%s" class="player"></tag>
     </div>
 
-<div>
-<H1> </H1> 
-</div>
-
     <footer>
-<center>      
-
-</center> 
+	    <center><h4>Video not playing ? possibly because your browser or the player doesn't support codec please download and watch :D</h4></center><p>
+	    <center><h2> <b>(c)</b> ADARSH GOEL</h2></center>
+	    
     </footer>
-
     <script src="https://cdn.plyr.io/3.6.9/plyr.js"></script>
 	<script>
         const controls = [
@@ -191,6 +78,5 @@ margin-top:-2px;
         const footer = document.querySelector('footer');
         const toogle = document.querySelector('.toogle');
     </script>
-</div>
 </body>
 </html>
