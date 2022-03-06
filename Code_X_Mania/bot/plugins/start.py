@@ -142,17 +142,10 @@ You can also add me to your movie or video channel to get stream and download bu
        
 
         msg_text ="""
-<i><u>𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !</u></i>
-<b>📂 Fɪʟᴇ ɴᴀᴍᴇ :</b> <i>{}</i>
-
-<b>📦 Fɪʟᴇ ꜱɪᴢᴇ :</b> <i>{}</i>
-
-<b>📥 Dᴏᴡɴʟᴏᴀᴅ :</b> <i>{}</i>
-
-<b> 🖥WATCH  :</b> <i>{}</i>
-
-<b>🚸 Nᴏᴛᴇ : LINK WON'T EXPIRE TILL I DELETE</b>
-"""
+<u>🔗 **LINK GENERATED**</u>
+<b>🔤 Name:</b> <code>{}</code>
+<b>💯 Size:</b> **{}**
+<b>📥 Download URL:</b> <code>{}</code>"""
 
         await m.reply_text(
             text=msg_text.format(file_name, file_size, online_link, stream_link),
