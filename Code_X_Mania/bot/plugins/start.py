@@ -142,10 +142,11 @@ You can also add me to your movie or video channel to get stream and download bu
        
 
         msg_text ="""
-<u>🔗 **LINK GENERATED**</u>
-<b>🔤 Name:</b> <code>{}</code>
-<b>💯 Size:</b> **{}**
-<b>📥 Download URL:</b> <code>{}</code>"""
+<b>🔗 LINK GENERATED</b>
+
+<b>🔤 Name:</b> <u>{}</u>
+<b>💯 Size:</b> <b>{}</b>
+<b>📥 Download URL: </b> <code>{}</code>"""
 
         await m.reply_text(
             text=msg_text.format(file_name, file_size, online_link, stream_link),
