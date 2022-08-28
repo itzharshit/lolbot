@@ -37,7 +37,7 @@ async def start(b, m):
             except UserNotParticipant:
                  await StreamBot.send_photo(
                     chat_id=m.chat.id,
-                    photo="https://i.ibb.co/NKXgXD4/vlmnwosn-0.png",
+                    photo="https://raw.githubusercontent.com/Itzharshit/lolbot/main/assets/logo.jpg",
                     caption="You have to join my updates channel in order to use me.</i>",
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -58,7 +58,7 @@ async def start(b, m):
                 return
         await StreamBot.send_photo(
             chat_id=m.chat.id,
-            photo ="https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png",
+            photo ="https://raw.githubusercontent.com/Itzharshit/lolbot/main/assets/logo.jpg",
             caption ="""Hello !
 I am file stream bot, I can stream or download your video file in your browser.
 You can also add me to your movie or video channel to get stream and download button for your file.""",
@@ -82,7 +82,7 @@ You can also add me to your movie or video channel to get stream and download bu
             except UserNotParticipant:
                 await StreamBot.send_photo(
                     chat_id=m.chat.id,
-                    photo="https://i.ibb.co/ys3Tgpk/mtzijuhd-0.png",
+                    photo="https://raw.githubusercontent.com/Itzharshit/lolbot/main/assets/logo.jpg",
                     caption="You have to join my updates channel in order to use me.!",
                     reply_markup=InlineKeyboardMarkup(
                         [
@@ -178,7 +178,7 @@ async def help_handler(bot, message):
         except UserNotParticipant:
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
-                photo="https://i.ibb.co/ys3Tgpk/mtzijuhd-0.png",
+                photo="https://raw.githubusercontent.com/Itzharshit/lolbot/main/assets/logo.jpg",
                 Caption="You have to join my updates channel in order to use me.",
                 reply_markup=InlineKeyboardMarkup(
                     [
