@@ -31,7 +31,7 @@ async def private_receive_handler(c: Client, m: Message):
             if user.status == "kicked":
                 await c.send_message(
                     chat_id=m.chat.id,
-                    text="Sorry man, You are banned\n\n  **contact @pyrogrammers**",
+                    text="Sorry bruh, You are banned🤪\n\n  **contact @pyrogrammerschat**",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -39,11 +39,11 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="""<i>𝙹𝙾𝙸𝙽 UPDATES CHANNEL 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴 🔐</i>""",
+                text="""You have to join my updates channel in order to use me.""",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("Join channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -54,7 +54,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="An error occurred. Contact @pyrogrammers",
+                text="An error occurred. Contact @pyrogrammerschat",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -96,7 +96,7 @@ async def private_receive_handler(c: Client, m: Message):
             quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                                                InlineKeyboardButton('Dᴏᴡɴʟᴏᴀᴅ 📥', url=online_link)
+                                                InlineKeyboardButton('Play 📥', url=online_link)
                                                ]]) #Download Link
         )
     except FloodWait as e:
@@ -127,11 +127,11 @@ async def private_receive_handler(c: Client, m: Message):
         except UserNotParticipant:
             await c.send_message(
                 chat_id=m.chat.id,
-                text="""<i>𝙹𝙾𝙸𝙽 UPDATES CHANNEL 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴 🔐</i>""",
+                text="""Join my updates channel in order to use me.""",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("Join channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -142,7 +142,7 @@ async def private_receive_handler(c: Client, m: Message):
             await m.reply_text(e)
             await c.send_message(
                 chat_id=m.chat.id,
-                text="An error occurred contact @pyrogrammers",
+                text="An error occurred contact @pyrogrammerschat",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
