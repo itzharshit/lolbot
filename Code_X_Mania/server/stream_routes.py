@@ -33,7 +33,7 @@ async def stream_handler(request):
         return web.Response(text=await render_page(message_id), content_type='text/html')
     except ValueError as e:
         logging.error(e)
-        return web.json_response({"REQUESTED FILE NOT FOUND": "LINK MIGHT HAVE EXPIRED KINDLY MAKE A NEW ONE"})
+        return web.json_response({"File not found": "Your link has been expired."})
 
 
 
