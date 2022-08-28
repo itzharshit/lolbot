@@ -29,7 +29,7 @@ async def start(b, m):
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="You are banned, contact @pyrogrammers",
+                        text="You are banned, contact @pyrogrammerschat",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -38,11 +38,11 @@ async def start(b, m):
                  await StreamBot.send_photo(
                     chat_id=m.chat.id,
                     photo="https://i.ibb.co/NKXgXD4/vlmnwosn-0.png",
-                    caption="<i>𝙹𝙾𝙸𝙽 CHANNEL 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴🔐</i>",
+                    caption="You have to join my updates channel in order to use me.</i>",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("Jᴏɪɴ ɴᴏᴡ 🔓", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                                InlineKeyboardButton("Join channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                             ]
                         ]
                     ),
@@ -52,7 +52,7 @@ async def start(b, m):
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="<i>An error occurred</i> <b>Contact @pyrogrammers</b>",
+                    text="<i>An error occurred</i> <b>Contact @pyrogrammerschat</b>",
                     parse_mode="HTML",
                     disable_web_page_preview=True)
                 return
@@ -60,7 +60,7 @@ async def start(b, m):
             chat_id=m.chat.id,
             photo ="https://user-images.githubusercontent.com/88939380/137127129-a86fc939-2931-4c66-b6f6-b57711a9eab7.png",
             caption ="""Hello !
-I am file stream bot, I can play your video file in your browser.
+I am file stream bot, I can stream or download your video file in your browser.
 You can also add me to your movie or video channel to get stream and download button for your file.""",
             parse_mode="html",
             )
@@ -74,7 +74,7 @@ You can also add me to your movie or video channel to get stream and download bu
                 if user.status == "kicked":
                     await b.send_message(
                         chat_id=m.chat.id,
-                        text="**You are banned, contact @pyrogrammers",
+                        text="**You are banned, contact @pyrogrammerschat",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -83,14 +83,14 @@ You can also add me to your movie or video channel to get stream and download bu
                 await StreamBot.send_photo(
                     chat_id=m.chat.id,
                     photo="https://i.ibb.co/ys3Tgpk/mtzijuhd-0.png",
-                    caption="**Pʟᴇᴀsᴇ Jᴏɪɴ  Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴛʜɪs Bᴏᴛ**!\n\n**Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ**!",
+                    caption="You have to join my updates channel in order to use me.!",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton("🤖 Join Updates Channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                             ],
                             [
-                                InlineKeyboardButton("🔄 Refresh / Try Again",
+                                InlineKeyboardButton("🔄 Refresh",
                                                      url=f"https://t.me/{Var.APP_NAME}.herokuapp.com/{usr_cmd}") # Chnage ur app name
                             ]
                         ]
@@ -101,7 +101,7 @@ You can also add me to your movie or video channel to get stream and download bu
             except Exception:
                 await b.send_message(
                     chat_id=m.chat.id,
-                    text="**An error occurred, contact @pyrogrammers group.",
+                    text="**An error occurred, contact @pyrogrammerschat.",
                     parse_mode="markdown",
                     disable_web_page_preview=True)
                 return
@@ -179,11 +179,11 @@ async def help_handler(bot, message):
             await StreamBot.send_photo(
                 chat_id=message.chat.id,
                 photo="https://i.ibb.co/ys3Tgpk/mtzijuhd-0.png",
-                Caption="**𝙹𝙾𝙸𝙽 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 𝚃𝙾 𝚄𝚂𝙴 ᴛʜɪs Bᴏᴛ!**\n\n__Dᴜᴇ ᴛᴏ Oᴠᴇʀʟᴏᴀᴅ, Oɴʟʏ Cʜᴀɴɴᴇʟ Sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴛʜᴇ Bᴏᴛ!__",
+                Caption="You have to join my updates channel in order to use me.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("🤖 Join Updates channel", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 ),
@@ -193,7 +193,7 @@ async def help_handler(bot, message):
         except Exception:
             await bot.send_message(
                 chat_id=message.chat.id,
-                text="__Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ. Cᴏɴᴛᴀᴄᴛ ᴍᴇ__ [ADARSH GOEL](https://t.me/codexmaniachat).",
+                text="Something went wrong.",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
