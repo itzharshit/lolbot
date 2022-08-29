@@ -96,7 +96,7 @@ async def private_receive_handler(c: Client, m: Message):
             quote=True,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                                                InlineKeyboardButton('Play 📥', url=online_link)
+                                                InlineKeyboardButton('Play 📥', web_app=online_link)
                                                ]]) #Download Link
         )
     except FloodWait as e:
@@ -191,7 +191,7 @@ async def private_receive_handler(c: Client, m: Message):
             parse_mode="HTML", 
             quote=True,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📺 PLAY ONLINE", url=stream_link), #Stream Link
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📺 PLAY ONLINE", web_app=stream_link), #Stream Link
                                                 InlineKeyboardButton('📥 DOWNLOAD', url=online_link)]]) #Download Link
         )
     except FloodWait as e:
@@ -222,7 +222,7 @@ async def channel_receive_handler(bot, broadcast):
             message_id=broadcast.message_id,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("📺 PLAY ONLINE ", url=stream_link),
+                    [InlineKeyboardButton("📺 PLAY ONLINE ", web_app=stream_link),
                      InlineKeyboardButton('📥 DOWNLOAD', url=online_link)] 
                 ]
             )
